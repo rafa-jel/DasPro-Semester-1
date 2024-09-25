@@ -6,15 +6,11 @@ public class PemilihanBilangan23 {
 
         System.out.print("Masukan angka : ");
         int angka = input.nextInt();
+        String hasil;
 
-        if (angka % 2 == 0) 
-        {
-         System.out.println("Angka " + angka + " termasuk bilangan genap");   
-        }
-        else 
-        {
-        System.out.println("Angka " + angka + " termasuk bilangan ganjil");   
+        hasil = (angka % 2 == 0) ? "Bilangan genap" : "Bilangan ganjil";
+        System.out.println(angka + " adalah " + hasil);
+         
         }
 
     }
-}
