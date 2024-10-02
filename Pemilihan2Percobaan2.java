@@ -4,9 +4,9 @@ public class Pemilihan2Percobaan2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String menu, member;
+        String menu, member, qris;
         int jumlah_beli, pilihan_menu;
-        double total_bayar, diskon = 1, harga = 0;
+        double total_bayar, diskon = 1, harga = 0, potongan_qris = 1000;
 
         System.out.println("-------------------------");
         System.out.println("===== MENU KAFE JTI =====");
@@ -41,8 +41,21 @@ public class Pemilihan2Percobaan2 {
             else {
                 System.out.println("Input menu salah, masukan dengan benar");
             }
-            total_bayar = harga - (harga * diskon);
-            System.out.println("Total harga setelah diskon = " + total_bayar);
+            System.out.print("Apakah membayar dengan Qris? (y/n) ");
+            qris = sc.nextLine();
+            if (qris.equalsIgnoreCase("y")) {
+                System.out.println("Besar diskon = 10 %");
+                System.out.println("Potongan harga dengan Qris = 1000");
+                total_bayar = harga - (harga * diskon) - potongan_qris;
+                System.out.println("Harga bayar setelah diskon dan potongan qris = " + total_bayar );
+            }
+            else {
+                System.out.println("Besar diskon = 10 %");
+                total_bayar = harga - (harga * diskon);
+                System.out.println("Harga bayar setelah diskon = " + total_bayar );
+            }
+            
+            
         }
         //operasi jika tidak memiliki member
         else if (member.equalsIgnoreCase("n")) {
@@ -65,8 +78,18 @@ public class Pemilihan2Percobaan2 {
         else {
             System.out.println("Member tidak valid");
         }
-        total_bayar = harga;
-        System.out.println("Total bayar = " + total_bayar);
+        System.out.print("Apakah membayar dengan Qris? (y/n) ");
+            qris = sc.nextLine();
+            if (qris.equalsIgnoreCase("y")) {
+                System.out.println("Potongan harga dengan Qris = 1000");
+                total_bayar = harga - potongan_qris;
+                System.out.println("Harga bayar setelah potongan qris = " + total_bayar );
+            }
+            else {
+                total_bayar = harga;
+                System.out.println("Harga bayar = " + total_bayar );
+            }
+        
 
         
         
