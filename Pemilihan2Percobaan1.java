@@ -8,8 +8,8 @@ public class Pemilihan2Percobaan1 {
         System.out.print("Masukan tahun = ");
         tahun = sc.nextInt();
 
-        if ((tahun % 4) == 0) {
-            if ((tahun % 100) != 0) {
+        if ((tahun % 4) == 0 && (tahun % 100) != 0) {
+            if ((tahun % 400) == 0)  {
                 System.out.println(tahun + " merupakan Tahun Kabisat");
             }
         } else {
