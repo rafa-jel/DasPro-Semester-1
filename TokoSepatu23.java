@@ -12,11 +12,11 @@ public class TokoSepatu23 {
         System.out.println("       Toko Sepatu");
         System.err.println("----------------------------");
         System.out.print("Merk Sepatu = ");
-        merk = input.nextLine().toLowerCase();
+        merk = sc.nextLine().toLowerCase();
         System.out.print("Kategori Sepatu = ");
-        kategori = input.nextLine().toLowerCase();
+        kategori = sc.nextLine().toLowerCase();
         System.out.print("Ukuran Sepatu = ");
-        ukuran = input.nextInt();
+        ukuran = sc.nextInt();
 
 
         if(merk.equalsIgnoreCase("converse")){
